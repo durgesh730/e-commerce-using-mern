@@ -1,0 +1,164 @@
+.btn-user {
+   color: #232354;
+   border-radius: .3rem;
+   border: 1px solid #232354;
+   background-color: #232354;
+   color: white;
+   padding: .8rem 4rem;
+}
+
+.btn-user:hover {
+   color:white;
+}
+
+.heads {
+   padding-top: 4rem;
+   text-align: center;
+   margin: auto;
+   color: #232354;
+}
+
+.heads span {
+   font-size: 1.6rem;
+}
+
+.showMore {
+   text-align: center;
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+}
+
+.btn-more {
+   background: transparent;
+   border: 1px solid #232354;
+   border-radius: .3rem;
+   padding: .5rem 3rem;
+   color: #232354;
+}
+
+
+
+/* Main_page-bottomNav  */
+
+.Main_page-bottomNav {
+   background-color: #232354;
+   padding-top: 1.5rem;
+   padding-bottom: 1rem;
+   color: white;
+   margin-top: 0rem;
+}
+
+.Main_page-bottomNav h2 {
+   text-align: center;
+   padding-top: 2rem;
+}
+
+.nav_item-list {
+   padding-top: 1rem;
+   display: flex;
+   justify-content: center;
+}
+
+.nav_item-list li {
+   list-style-type: none;
+}
+
+.nav_item-list li a {
+   text-decoration: none;
+   color: white;
+   padding: 1rem;
+}
+
+.nav_item-list li a:hover {
+   color: #4db5ff;
+}
+
+.footer_socials_MainPage {
+   text-align: center;
+   color: white;
+}
+
+.footer_socials_MainPage a {
+   padding: .5rem;
+   color: white;
+   font-size: 1.5rem;
+}
+
+.footer_socials_MainPage a:hover {
+   color: #4db5ff;
+}
+
+.line {
+   padding-top: 6rem;
+   border-bottom: .001rem solid white;
+}
+
+.footer_copyright_MainPage {
+   padding: 1rem;
+}
+
+.footer_copyright_MainPage {
+   text-align: center;
+}
+
+@media screen and (max-width:600px) {
+   .Main_page-bottomNav {
+      margin-top: 7rem;
+   }
+
+   .nav_item-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-right: 1rem;
+   }
+
+   .footer_copyright_MainPage {
+      font-size: .8rem;
+   }
+
+   .nav_item-list li a {
+      padding: 0rem;
+   }
+}
+
+
+@media screen and (max-width:600px) {
+   .nav_item-list {
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/* ============ LOADER CSS ======= */
+
+.loader {
+   margin: auto;
+   border: 16px solid #f3f3f3;
+   border-radius: 50%;
+   border-top: 16px solid #8443e5;
+   border-bottom: 16px solid #e543c3;
+   width: 80px;
+   height: 80px;
+   -webkit-animation: spin 2s linear infinite;
+   animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+   }
+
+   100% {
+      -webkit-transform: rotate(360deg);
+   }
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}

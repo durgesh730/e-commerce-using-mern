@@ -1,0 +1,61 @@
+.formfields{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 0rem;
+}
+
+.textarea{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 4rem;
+}
+
+.formfields form{
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 75%;
+    box-shadow: 0px 0px 10px -7px ;
+}
+
+.formfields form .formbutton{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.formfields form button{
+    text-align: center;
+    width: 40%;
+}
+
+@media screen and (max-width:1200px) {
+    .formfields form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .formfields form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .formfields form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .formfields form{
+        width: 100%;
+    }
+    .textarea{
+        display: block;
+   }
+}

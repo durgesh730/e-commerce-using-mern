@@ -1,0 +1,117 @@
+.vehicleOthers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: 'Poppins';
+}
+
+.card {
+    margin: auto;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 17rem;
+    height: 19rem;
+    font-size: .9rem;
+    text-align: center;
+    color:#8443e5;
+    border: none;
+    border: 1px solid #232354;
+}
+
+.card:hover {
+    box-shadow: 0 0 30px 2px rgba(228, 228, 228, 0.5);
+    border: none;
+}
+
+.vehicleInfo::-webkit-scrollbar {
+    display: none;
+}
+
+.vehicleUsers::-webkit-scrollbar {
+    display: none;
+}
+
+.card img {
+    border-radius: .4rem;
+    margin-top: .5rem;
+    width: 12rem;
+    height: 9rem;
+}
+
+.card .card-body {
+    margin: auto;
+}
+
+.card .card-body .TransName {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.card .card-body .TransName small {
+    color: #8443e5;
+}
+
+.card .card-body small {
+    font-size: .7rem;
+}
+
+.buttons .btn-card {
+    margin-top: 1rem;
+    background-color: #8443e5;
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    padding: .2rem 1rem;
+    font-size: .8rem;
+}
+
+
+@media screen and (max-width:1400px) {
+    .vehicleOthers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .vehicleInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vehicleOthers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .driver {
+        width: 100%;
+        display: flex;
+        min-height: 2vh;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .vehicleimg {
+        display: none;
+    }
+
+    .smallnav {
+        padding-top: .5rem;
+        grid-template-columns: repeat(2, 1fr);
+        height: 8vh;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .vehicleInfo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .vehicleOthers {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
