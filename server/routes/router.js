@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 import bcrypt from 'bcryptjs';
 import authenticate from "../middleware/authenticate.js";
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken";
 import User from "../models/userSchema.js";
 import Items from "../models/itemsSchema.js";
@@ -12,14 +12,14 @@ import Form from "../models/formSchema.js";
 
 const keysecret = "durgeshchaudharydurgeshchaudhary";
 
-// email config
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: "durgeshchaudhary020401@gmail.com",
-        pass: "lqfxwpogsaocehjc"
-    }
-})
+// // email config
+// const transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//         user: "durgeshchaudhary020401@gmail.com",
+//         pass: "lqfxwpogsaocehjc"
+//     }
+// })
 
 //signup API path /user/signup
 
@@ -140,7 +140,7 @@ router.put("/updatecount/:id", async (req, res) => {
 })
 
 router.put("/updatecountAdmin/:id", async (req, res) => {
-    const data = req.body; 
+    const data = req.body;
     try {
         const newData = {};
         if (data.rate) {
@@ -222,5 +222,15 @@ router.get("/palcedItems", async (req, res) => {
         res.status(201).json({ status: 201, message: "Some internal error occurred" })
     }
 })
+
+router.delete("/deletecartItem/:id", async (req, res) => {
+    try {
+        const colData = await Cart.findByIdAndDelete({ _id: req.params.id })
+        res.status(200).json({ status: 200, colData })
+    } catch (error) {
+        res.status(201).json({ status: 201, message: "Some internal error occurred" })
+    }
+})
+
 
 export default router;

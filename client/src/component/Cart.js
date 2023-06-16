@@ -34,7 +34,7 @@ const Cart = () => {
                             cartdata?.map((ite, ind) => {
                                 return (
                                     <>
-                                        <CartItems key={ind} item={ite?.ItemId} />
+                                        <CartItems key={ind} item={ite} GetCartData={GetCartData} />
                                     </>
                                 )
                             })
